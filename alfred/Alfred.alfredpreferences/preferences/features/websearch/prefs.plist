@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>580BFD34-2806-455A-8BB1-3530DDB521D2</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>reddit</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Reddit</string>
+			<key>url</key>
+			<string>https://www.google.com/search?rls=en&amp;q=site:reddit.com+{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>88545EF3-45E9-4569-BE75-E78051223928</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>ccli</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Search SongSelect for '{query}'</string>
+			<key>url</key>
+			<string>https://songselect.ccli.com/search/results?SongContent=&amp;SearchText={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>A2FC913A-8384-4818-957A-395C3F1CBED8</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gi</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Search Google Images for '{query}'</string>
+			<key>url</key>
+			<string>https://www.google.com/search?q={query}&amp;tbm=isch&amp;tbs=isz:l</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>EC183ABE-E14C-45B0-816B-8C728886C178</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>hymn</string>
+			<key>text</key>
+			<string>Go to Baptist Hymnal page {query} on Hymnary.org</string>
+			<key>url</key>
+			<string>https://hymnary.org/hymn/BH1991/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

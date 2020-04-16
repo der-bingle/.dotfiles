@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.derBingle.planningcenter.services</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>0408472F-40D0-43B6-8E9A-61B7A68F5EDB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B73C9E0A-E482-49E0-B8B2-3F000DD16FFE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4B3C85CE-7B23-4C78-AAA2-7F5FE93F7AB6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0408472F-40D0-43B6-8E9A-61B7A68F5EDB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7E11E378-CBAE-4842-9C72-42C6256784E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>50B0CD10-4D52-4898-9C05-DD3A34A829C3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4B3C85CE-7B23-4C78-AAA2-7F5FE93F7AB6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7E11E378-CBAE-4842-9C72-42C6256784E3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4883FB05-E558-4D8F-B363-406843A82DD3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>derBingle</string>
+	<key>description</key>
+	<string>Interact with PCS via Alfred</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Planning Center Services</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://services.planningcenteronline.com/songs/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>B73C9E0A-E482-49E0-B8B2-3F000DD16FFE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:sendTo}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>Planning Center</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>0408472F-40D0-43B6-8E9A-61B7A68F5EDB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>pcsong</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Getting songs...</string>
+				<key>script</key>
+				<string>#
+# Alfred Script Filter JSON format
+#
+# This example demonstrates all fields available for populating results.
+#
+# For an in-depth explanation, use the (?) help button to the bottom left.
+#
+
+cat &lt;&lt; EOB
+{
+  "items": [
+    {
+      "uid": "18529268",
+      "title": "All Glory Be To Christ",
+      "subtitle": "Jan 5, 2020",
+      "arg": "18529268",
+      "autocomplete": "All Glory Be To Christ",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 7008232,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17697767",
+      "title": "All I Have Is Christ",
+      "subtitle": "Jan 26, 2020",
+      "arg": "17697767",
+      "autocomplete": "All I Have Is Christ",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 5174122,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17745918",
+      "title": "Are You Washed In The Blood",
+      "subtitle": "Nov 3, 2019",
+      "arg": "17745918",
+      "autocomplete": "Are You Washed In The Blood",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 21105,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17746066",
+      "title": "At The Cross",
+      "subtitle": "Dec 29, 2019",
+      "arg": "17746066",
+      "autocomplete": "At The Cross",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 29499,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17698049",
+      "title": "Behold Our God",
+      "subtitle": "Feb 2, 2020",
+      "arg": "17698049",
+      "autocomplete": "Behold Our God",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 5937510,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17938648",
+      "title": "Blessed Be The Name",
+      "subtitle": "Sept 8, 2019",
+      "arg": "17938648",
+      "autocomplete": "Blessed Be The Name",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 34525,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17698153",
+      "title": "By His Wounds",
+      "subtitle": "Never scheduled",
+      "arg": "17698153",
+      "autocomplete": "By His Wounds",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 4926560,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17698264",
+      "title": "Christ Is Mine Forevermore",
+      "subtitle": "Never scheduled",
+      "arg": "17698264",
+      "autocomplete": "Christ Is Mine Forevermore",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 7036096,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18193248",
+      "title": "Crown Him With Many Crowns",
+      "subtitle": "Nov 3, 2019",
+      "arg": "18193248",
+      "autocomplete": "Crown Him With Many Crowns",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 23938,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17698401",
+      "title": "Death Was Arrested",
+      "subtitle": "Never scheduled",
+      "arg": "17698401",
+      "autocomplete": "Death Was Arrested",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 7046448,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17746233",
+      "title": "Down at the Cross",
+      "subtitle": "Jan 26, 2020",
+      "arg": "17746233",
+      "autocomplete": "Down at the Cross",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 57667,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17755535",
+      "title": "Famous One",
+      "subtitle": "Feb 9, 2020",
+      "arg": "17755535",
+      "autocomplete": "Famous One",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 3599431,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17698553",
+      "title": "Good Good Father",
+      "subtitle": "Dec 15, 2019",
+      "arg": "17698553",
+      "autocomplete": "Good Good Father",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 7036612,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17698630",
+      "title": "Grace Flows Down",
+      "subtitle": "Jan 12, 2020",
+      "arg": "17698630",
+      "autocomplete": "Grace Flows Down",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 1223050,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17698710",
+      "title": "Grace Greater Than Our Sin",
+      "subtitle": "Jan 12, 2020",
+      "arg": "17698710",
+      "autocomplete": "Grace Greater Than Our Sin",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 31690,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18757124",
+      "title": "Great Is Thy Faithfulness",
+      "subtitle": "Feb 9, 2020",
+      "arg": "18757124",
+      "autocomplete": "Great Is Thy Faithfulness",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 18723,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17867356",
+      "title": "Have Thine Own Way",
+      "subtitle": "Jan 5, 2020",
+      "arg": "17867356",
+      "autocomplete": "Have Thine Own Way",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 28225,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17718910",
+      "title": "He Keeps Me Singing",
+      "subtitle": "Feb 2, 2020",
+      "arg": "17718910",
+      "autocomplete": "He Keeps Me Singing",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 27855,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17751343",
+      "title": "He Leadeth Me O Blessed Thought",
+      "subtitle": "Never scheduled",
+      "arg": "17751343",
+      "autocomplete": "He Leadeth Me O Blessed Thought",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 62762,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18169199",
+      "title": "He Lives",
+      "subtitle": "Oct 27, 2019",
+      "arg": "18169199",
+      "autocomplete": "He Lives",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 17597,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17699240",
+      "title": "He Will Hold Me Fast",
+      "subtitle": "Never scheduled",
+      "arg": "17699240",
+      "autocomplete": "He Will Hold Me Fast",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 7016161,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17858242",
+      "title": "Here I Am To Worship",
+      "subtitle": "Aug 25, 2019",
+      "arg": "17858242",
+      "autocomplete": "Here I Am To Worship",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 3266032,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17699362",
+      "title": "His Mercy Is More",
+      "subtitle": "Jan 5, 2020",
+      "arg": "17699362",
+      "autocomplete": "His Mercy Is More",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 7065053,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18297153",
+      "title": "His Name Shall Be",
+      "subtitle": "Dec 22, 2019",
+      "arg": "18297153",
+      "autocomplete": "His Name Shall Be",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 7069406,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17697377",
+      "title": "Holy, Holy, Holy",
+      "subtitle": "Aug 18, 2019",
+      "arg": "17697377",
+      "autocomplete": "Holy, Holy, Holy",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 1156,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17699491",
+      "title": "How Great Is Our God",
+      "subtitle": "Dec 1, 2019",
+      "arg": "17699491",
+      "autocomplete": "How Great Is Our God",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 4348399,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17699553",
+      "title": "How Great Thou Art",
+      "subtitle": "Oct 8, 2019",
+      "arg": "17699553",
+      "autocomplete": "How Great Thou Art",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 14181,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17754762",
+      "title": "I Have Decided To Follow Jesus",
+      "subtitle": "Oct 27, 2019",
+      "arg": "17754762",
+      "autocomplete": "I Have Decided To Follow Jesus",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 4369512,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17985093",
+      "title": "I Love To Tell The Story",
+      "subtitle": "Sept 22, 2019",
+      "arg": "17985093",
+      "autocomplete": "I Love To Tell The Story",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 29413,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17984992",
+      "title": "I Need Thee Every Hour",
+      "subtitle": "Feb 16, 2020",
+      "arg": "17984992",
+      "autocomplete": "I Need Thee Every Hour",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 78811,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "16122902",
+      "title": "I Stand Amazed in the Presence",
+      "subtitle": "Dec 29, 2019",
+      "arg": "16122902",
+      "autocomplete": "I Stand Amazed in the Presence",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 25297,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17720027",
+      "title": "I Surrender All",
+      "subtitle": "Aug 18, 2019",
+      "arg": "17720027",
+      "autocomplete": "I Surrender All",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 23189,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18486782",
+      "title": "In Christ Alone",
+      "subtitle": "Jan 19, 2020",
+      "arg": "18486782",
+      "autocomplete": "In Christ Alone",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 3350395,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17699716",
+      "title": "Is He Worthy",
+      "subtitle": "Never scheduled",
+      "arg": "17699716",
+      "autocomplete": "Is He Worthy",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 7108951,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17719804",
+      "title": "It Is Well With My Soul",
+      "subtitle": "Feb 2, 2020",
+      "arg": "17719804",
+      "autocomplete": "It Is Well With My Soul",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 25376,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17752064",
+      "title": "Jesus Is All The World To Me",
+      "subtitle": "Jul 28, 2019",
+      "arg": "17752064",
+      "autocomplete": "Jesus Is All The World To Me",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 138830,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "16133428",
+      "title": "Jesus Paid It All",
+      "subtitle": "Feb 2, 2020",
+      "arg": "16133428",
+      "autocomplete": "Jesus Paid It All",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 4689508,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "16122068",
+      "title": "Jesus Thank You",
+      "subtitle": "Jan 26, 2020",
+      "arg": "16122068",
+      "autocomplete": "Jesus Thank You",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 4475341,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18274280",
+      "title": "Jesus What a Friend for Sinners",
+      "subtitle": "Nov 17, 2019",
+      "arg": "18274280",
+      "autocomplete": "Jesus What a Friend for Sinners",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 22142,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17978776",
+      "title": "Jesus, Keep Me Near The Cross",
+      "subtitle": "Sept 22, 2019",
+      "arg": "17978776",
+      "autocomplete": "Jesus, Keep Me Near The Cross",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 36736,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17752287",
+      "title": "Just As I Am",
+      "subtitle": "Sept 8, 2019",
+      "arg": "17752287",
+      "autocomplete": "Just As I Am",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 23206,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17702219",
+      "title": "Lead Us Back",
+      "subtitle": "Never scheduled",
+      "arg": "17702219",
+      "autocomplete": "Lead Us Back",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 4878333,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17978728",
+      "title": "Leaning On The Everlasting Arms",
+      "subtitle": "Feb 9, 2020",
+      "arg": "17978728",
+      "autocomplete": "Leaning On The Everlasting Arms",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 31779,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17754483",
+      "title": "Living For Jesus",
+      "subtitle": "Sept 29, 2019",
+      "arg": "17754483",
+      "autocomplete": "Living For Jesus",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 20687,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17702478",
+      "title": "Mighty Is The Power Of The Cross",
+      "subtitle": "Sept 15, 2019",
+      "arg": "17702478",
+      "autocomplete": "Mighty Is The Power Of The Cross",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 3496455,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18064239",
+      "title": "My Jesus I Love Thee",
+      "subtitle": "Jan 26, 2020",
+      "arg": "18064239",
+      "autocomplete": "My Jesus I Love Thee",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 27817,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18118340",
+      "title": "Nothing But The Blood",
+      "subtitle": "Dec 29, 2019",
+      "arg": "18118340",
+      "autocomplete": "Nothing But The Blood",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 21332,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18239967",
+      "title": "Now I Belong To Jesus",
+      "subtitle": "Nov 10, 2019",
+      "arg": "18239967",
+      "autocomplete": "Now I Belong To Jesus",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 17638,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18193307",
+      "title": "O Come To The Altar",
+      "subtitle": "Feb 9, 2020",
+      "arg": "18193307",
+      "autocomplete": "O Come To The Altar",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 7051511,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17975368",
+      "title": "Open The Eyes Of My Heart",
+      "subtitle": "Sept 15, 2019",
+      "arg": "17975368",
+      "autocomplete": "Open The Eyes Of My Heart",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 2298355,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18549288",
+      "title": "People's Praise",
+      "subtitle": "Never scheduled",
+      "arg": "18549288",
+      "autocomplete": "People's Praise",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": null,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18557651",
+      "title": "Precious Memories",
+      "subtitle": "Jan 4, 2020",
+      "arg": "18557651",
+      "autocomplete": "Precious Memories",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 41800,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17984890",
+      "title": "Redeemed, How I Love to Proclaim It",
+      "subtitle": "Jan 5, 2020",
+      "arg": "17984890",
+      "autocomplete": "Redeemed, How I Love to Proclaim It",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 30622,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18174441",
+      "title": "Satisfied With Jesus",
+      "subtitle": "Jan 19, 2020",
+      "arg": "18174441",
+      "autocomplete": "Satisfied With Jesus",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 84692,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17879605",
+      "title": "Send The Light",
+      "subtitle": "Sept 1, 2019",
+      "arg": "17879605",
+      "autocomplete": "Send The Light",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 76954,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18274966",
+      "title": "Set My Soul Afire",
+      "subtitle": "Jan 5, 2020",
+      "arg": "18274966",
+      "autocomplete": "Set My Soul Afire",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 26409,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17719644",
+      "title": "Shine Into Our Night",
+      "subtitle": "Feb 9, 2020",
+      "arg": "17719644",
+      "autocomplete": "Shine Into Our Night",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 6167688,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17720575",
+      "title": "Shout To The Lord",
+      "subtitle": "Sept 29, 2019",
+      "arg": "17720575",
+      "autocomplete": "Shout To The Lord",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 1406918,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18236861",
+      "title": "Since Jesus Came Into My Heart",
+      "subtitle": "Nov 10, 2019",
+      "arg": "18236861",
+      "autocomplete": "Since Jesus Came Into My Heart",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 71650,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18012436",
+      "title": "Softly And Tenderly",
+      "subtitle": "Never scheduled",
+      "arg": "18012436",
+      "autocomplete": "Softly And Tenderly",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 28380,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17858181",
+      "title": "Standing On The Promises",
+      "subtitle": "Jan 19, 2020",
+      "arg": "17858181",
+      "autocomplete": "Standing On The Promises",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 31803,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17754368",
+      "title": "The Lily Of The Valley",
+      "subtitle": "Sept 8, 2019",
+      "arg": "17754368",
+      "autocomplete": "The Lily Of The Valley",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 49242,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17745644",
+      "title": "The Old Rugged Cross",
+      "subtitle": "Sept 29, 2019",
+      "arg": "17745644",
+      "autocomplete": "The Old Rugged Cross",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 19722,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17746829",
+      "title": "The Way of the Cross Leads Home",
+      "subtitle": "Never scheduled",
+      "arg": "17746829",
+      "autocomplete": "The Way of the Cross Leads Home",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 36028,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "16123675",
+      "title": "There Is A Fountain",
+      "subtitle": "Dec 8, 2019",
+      "arg": "16123675",
+      "autocomplete": "There Is A Fountain",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 27707,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17745737",
+      "title": "There Is Power In The Blood",
+      "subtitle": "Jan 12, 2020",
+      "arg": "17745737",
+      "autocomplete": "There Is Power In The Blood",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 21370,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18193503",
+      "title": "There's Something About That Name",
+      "subtitle": "Nov 3, 2019",
+      "arg": "18193503",
+      "autocomplete": "There's Something About That Name",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 14064,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17697595",
+      "title": "To God Be The Glory",
+      "subtitle": "Jan 12, 2020",
+      "arg": "17697595",
+      "autocomplete": "To God Be The Glory",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 23426,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17752200",
+      "title": "Turn Your Eyes Upon Jesus",
+      "subtitle": "Jan 19, 2020",
+      "arg": "17752200",
+      "autocomplete": "Turn Your Eyes Upon Jesus",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 15960,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17755097",
+      "title": "What A Beautiful Name",
+      "subtitle": "Never scheduled",
+      "arg": "17755097",
+      "autocomplete": "What A Beautiful Name",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 7068424,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17751845",
+      "title": "What A Friend We Have In Jesus",
+      "subtitle": "Jan 4, 2020",
+      "arg": "17751845",
+      "autocomplete": "What A Friend We Have In Jesus",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 27714,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17751937",
+      "title": "When I Survey The Wondrous Cross",
+      "subtitle": "Nov 10, 2019",
+      "arg": "17751937",
+      "autocomplete": "When I Survey The Wondrous Cross",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 27893,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17879884",
+      "title": "Wherever He Leads I'll Go",
+      "subtitle": "Jan 12, 2020",
+      "arg": "17879884",
+      "autocomplete": "Wherever He Leads I'll Go",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 25194,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18274744",
+      "title": "Whiter Than Snow",
+      "subtitle": "Feb 2, 2020",
+      "arg": "18274744",
+      "autocomplete": "Whiter Than Snow",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 37144,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "18043093",
+      "title": "Without Him",
+      "subtitle": "Sept 29, 2019",
+      "arg": "18043093",
+      "autocomplete": "Without Him",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 27219,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    },
+    {
+      "uid": "17697458",
+      "title": "Worthy Of Worship",
+      "subtitle": "Never scheduled",
+      "arg": "17697458",
+      "autocomplete": "Worthy Of Worship",
+      "variables": {
+        "sendTo": "Planning Center"
+      },
+      "mods": {
+        "cmd": {
+          "arg": 82869,
+          "variables": {
+            "sendTo": "CCLI"
+          }
+        }
+      }
+    }
+  ]
+}
+EOB</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>test.sh</string>
+				<key>subtext</key>
+				<string>Choose a song to open in Planning Center Services</string>
+				<key>title</key>
+				<string>Planning Center</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>50B0CD10-4D52-4898-9C05-DD3A34A829C3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>4B3C85CE-7B23-4C78-AAA2-7F5FE93F7AB6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://services.planningcenteronline.com/songs/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>4883FB05-E558-4D8F-B363-406843A82DD3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:sendTo}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>CCLI</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>7E11E378-CBAE-4842-9C72-42C6256784E3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Alfred's Script Filter object is extremely powerful, and gives you control over the results displayed in Alfred.
+
+Alfred 3 now supports JSON, which is the recommended format. XML is also supported for legacy Alfred 2 workflows, and has been updated to include the new features.
+
+A new option now exists for Script Filters, "Alfred filters results". This allows you to return a whole list of results, let Alfred do the subsequent filtering with extreme performance. When this option is selected, your script will be called once with no argument.</string>
+	<key>uidata</key>
+	<dict>
+		<key>0408472F-40D0-43B6-8E9A-61B7A68F5EDB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>460</integer>
+			<key>ypos</key>
+			<integer>80</integer>
+		</dict>
+		<key>4883FB05-E558-4D8F-B363-406843A82DD3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>620</integer>
+			<key>ypos</key>
+			<integer>320</integer>
+		</dict>
+		<key>4B3C85CE-7B23-4C78-AAA2-7F5FE93F7AB6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
+		<key>50B0CD10-4D52-4898-9C05-DD3A34A829C3</key>
+		<dict>
+			<key>note</key>
+			<string>Alfred 3 now supports JSON as the Script Filter output. This is the recommended output.</string>
+			<key>xpos</key>
+			<integer>40</integer>
+			<key>ypos</key>
+			<integer>210</integer>
+		</dict>
+		<key>7E11E378-CBAE-4842-9C72-42C6256784E3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>460</integer>
+			<key>ypos</key>
+			<integer>350</integer>
+		</dict>
+		<key>B73C9E0A-E482-49E0-B8B2-3F000DD16FFE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>620</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/der-bingle</string>
+</dict>
+</plist>
